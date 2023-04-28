@@ -4,8 +4,13 @@ using UnityEngine;
 
 public class Collectable : MonoBehaviour
 {
-    [Header("General Stats")]
-    [SerializeField] private string _name;
-    [SerializeField] private CollectableType _collectableType;
-    [SerializeField] [Range(0,100)] private int _value;
+    [SerializeField] private CollectableData _data;
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag=="Player")
+        {
+
+        }
+    }
 }

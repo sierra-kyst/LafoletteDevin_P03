@@ -8,5 +8,7 @@ public enum CollectableType
     Health,
     Ammo,
     Item,
-    Bonus
+    Powerup,
+    Bonus,
+    Other
 }
