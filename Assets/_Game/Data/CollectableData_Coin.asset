@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbbe0383598cc3441ab8d41a9e28df6c, type: 3}
   m_Name: CollectableData_Coin
   m_EditorClassIdentifier: 
-  _name: Coin
   _collectableType: 0
   _value: 1
+  _soundEffect: {fileID: 6302232499793720102, guid: e3707be431ea71b4782902df535d973d, type: 3}

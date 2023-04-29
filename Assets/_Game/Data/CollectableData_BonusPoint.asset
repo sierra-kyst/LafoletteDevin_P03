@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: CollectableData_BonusPoint
   m_EditorClassIdentifier: 
   _name: BonusPoint
-  _collectableType: 4
+  _collectableType: 5
   _value: 1
+  _soundEffect: {fileID: 0}

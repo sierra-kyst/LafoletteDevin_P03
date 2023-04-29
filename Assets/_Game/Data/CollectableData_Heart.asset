@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbbe0383598cc3441ab8d41a9e28df6c, type: 3}
   m_Name: CollectableData_Heart
   m_EditorClassIdentifier: 
-  _name: Heart
   _collectableType: 1
   _value: 25
+  _soundEffect: {fileID: 6302232499793720102, guid: 00c6bec1554019146bb3b22aad871b58, type: 3}

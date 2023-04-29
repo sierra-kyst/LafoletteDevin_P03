@@ -143,6 +143,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _data: {fileID: 0}
+  _artToDisable: {fileID: 8665185996689015911}
+  _collider: {fileID: 8665185995915487791}
 --- !u!1 &8665185996689015911
 GameObject:
   m_ObjectHideFlags: 0
@@ -154,8 +156,8 @@ GameObject:
   - component: {fileID: 8665185996689015910}
   - component: {fileID: 8665185996689015907}
   m_Layer: 0
-  m_Name: Animation
-  m_TagString: Untagged
+  m_Name: Art/Animation
+  m_TagString: Art
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

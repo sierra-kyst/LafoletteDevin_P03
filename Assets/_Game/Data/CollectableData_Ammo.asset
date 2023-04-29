@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbbe0383598cc3441ab8d41a9e28df6c, type: 3}
   m_Name: CollectableData_Ammo
   m_EditorClassIdentifier: 
-  _name: Ammo
   _collectableType: 2
   _value: 50
+  _soundEffect: {fileID: 6302232499793720102, guid: a95a0a14c77be044ebd236fb9df791d8, type: 3}
