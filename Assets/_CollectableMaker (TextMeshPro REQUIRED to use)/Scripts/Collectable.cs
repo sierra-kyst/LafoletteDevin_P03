@@ -2,30 +2,33 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Collider))]
 public class Collectable : MonoBehaviour
 {
     [SerializeField] private CollectableData _data;
-    private Player _player;
     //private Powerup _powerup; //MAKE SEPARATE SCRIPT FOR POWERUP(S)
     //private Item _item; //MAKE SEPARATE SCRIPT FOR ITEM PICKUP(S)
-    [SerializeField] private GameObject _artToDisable;
-    [SerializeField] private Collider _collider;
+    [SerializeField] private GameObject _artToDisable = null;
+    private Collider _collider;
+
+    private bool timerOn = false;
+    private int timer = 0;
+
+    public Player _player;
 
     private void Awake()
     {
-        _player = gameObject.GetComponent<Player>();
         //_powerup = GetComponent<Powerup>();
         //_item = GetComponent<Item>();
-        _artToDisable = GameObject.FindGameObjectWithTag("Art").GetComponent<GameObject>();
-        _collider = gameObject.GetComponent<Collider>();
+        _collider = GetComponent<Collider>();
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag=="Player")
+        _player = GetComponent<Player>();
+        if (other.gameObject.tag=="Player")
         {
-            
-            if(_data._collectableType == CollectableType.Currency)
+            if (_data._collectableType == CollectableType.Currency)
             {
                 _player.currencyCollect(_data._value);
             }
@@ -54,8 +57,18 @@ public class Collectable : MonoBehaviour
                 AudioSource newSound = Instantiate(_data._soundEffect, transform.position, Quaternion.identity);
                 Destroy(newSound.gameObject, newSound.clip.length);
             }
+            if (_data._pickupParticle != null)
+            {
+                var particle = Instantiate(_data._pickupParticle, transform.position, transform.rotation);
+                Destroy(particle.gameObject, 1);
+            }
             _artToDisable.SetActive(false);
             _collider.enabled = false;
+            Debug.Log(_data._collectableType.ToString() + " get!");
+            if (_data.timer == true)
+            {
+                timerOn = true;
+            }
         }
     }
 
@@ -95,8 +108,33 @@ public class Collectable : MonoBehaviour
                 AudioSource newSound = Instantiate(_data._soundEffect, transform.position, Quaternion.identity);
                 Destroy(newSound.gameObject, newSound.clip.length);
             }
+            if (_data._pickupParticle != null)
+            {
+                var particle = Instantiate(_data._pickupParticle, transform.position, transform.rotation);
+                Destroy(particle.gameObject, 1);
+            }
             _artToDisable.SetActive(false);
             _collider.enabled = false;
+            Debug.Log(_data._collectableType.ToString() + " get!");
+            if(_data.timer == true)
+            {
+                timerOn = true;
+            }
+        }
+    }
+
+    private void Update()
+    {
+        if(timerOn)
+        {
+            timer++;
+            if(timer >= _data.timerDuration)
+            {
+                _artToDisable.SetActive(true);
+                _collider.enabled = true;
+                timerOn = false;
+                timer = 0;
+            }
         }
     }
 }
