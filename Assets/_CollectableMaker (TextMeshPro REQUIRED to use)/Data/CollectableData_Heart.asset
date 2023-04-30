@@ -10,9 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbbe0383598cc3441ab8d41a9e28df6c, type: 3}
-  m_Name: CollectableData_BonusPoint
+  m_Name: CollectableData_Heart
   m_EditorClassIdentifier: 
-  _name: BonusPoint
-  _collectableType: 5
-  _value: 1
-  _soundEffect: {fileID: 0}
+  _name: Heart
+  _collectableType: 1
+  _value: 25
+  timer: 1
+  timerDuration: 250
+  _soundEffect: {fileID: 6302232499793720102, guid: 00c6bec1554019146bb3b22aad871b58, type: 3}
+  _pickupParticle: {fileID: 8905343508373272409, guid: 7d255bdc54dc02d44a97864959a0cc14, type: 3}

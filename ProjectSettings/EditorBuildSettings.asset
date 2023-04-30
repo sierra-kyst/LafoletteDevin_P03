@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/_Game/Scenes/CollectableMaker.unity
+    path: Assets/_CollectableMaker (TextMeshPro REQUIRED to use)/Scenes/CollectableMaker.unity
     guid: 2a4a1c977712c08429a0a9352464e5ea
   m_configObjects: {}

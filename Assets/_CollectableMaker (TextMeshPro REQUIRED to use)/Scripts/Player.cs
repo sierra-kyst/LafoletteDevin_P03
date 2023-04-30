@@ -10,12 +10,14 @@ public class Player : MonoBehaviour
     [Range(0, 100)] public int currentHealth;
     private int maxAmmo = 100;
     [Range(0, 100)] public int currentAmmo = 50;
-    public int currency;
-    [Range(0, 10)] public int bonusPoints;
+    
     [SerializeField] private TMP_Text currentHealthTextView;
     [SerializeField] private TMP_Text currentAmmoTextView;
     [SerializeField] private TMP_Text currencyTextView;
     [SerializeField] private TMP_Text bonusPointsTextView;
+
+    [HideInInspector] public int currency;
+    [HideInInspector] public int bonusPoints;
 
     private void Awake()
     {

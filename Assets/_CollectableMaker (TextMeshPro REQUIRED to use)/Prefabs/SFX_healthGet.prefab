@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7890092923473956315}
   - component: {fileID: 6302232499793720102}
   m_Layer: 0
-  m_Name: coinGet
+  m_Name: SFX_healthGet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -42,7 +42,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 34c6ceaff826e5344bf3ad97744f9f45, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 83928edf4fe14cf42bf0b22540898431, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

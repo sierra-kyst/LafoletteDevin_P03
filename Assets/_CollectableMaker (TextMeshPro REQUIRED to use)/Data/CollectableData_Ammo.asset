@@ -10,8 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbbe0383598cc3441ab8d41a9e28df6c, type: 3}
-  m_Name: CollectableData_Coin
+  m_Name: CollectableData_Ammo
   m_EditorClassIdentifier: 
-  _collectableType: 0
-  _value: 1
-  _soundEffect: {fileID: 6302232499793720102, guid: e3707be431ea71b4782902df535d973d, type: 3}
+  _name: Ammo
+  _collectableType: 2
+  _value: 50
+  timer: 1
+  timerDuration: 500
+  _soundEffect: {fileID: 6302232499793720102, guid: a95a0a14c77be044ebd236fb9df791d8, type: 3}
+  _pickupParticle: {fileID: 8905343508373272409, guid: 12ed0ed3950bd354a8066d647d31274b, type: 3}
